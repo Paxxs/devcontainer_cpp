@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+# devcontainer_cpp
 
-You can use the [editor on GitHub](https://github.com/Paxxs/devcontainer_cpp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+自带 fish-shell & starship 的 DevContainer C/C++ 开发环境基础包
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+特性：
+- cpptools （ms-vscode）
+- cmake-tools（ms-vscode）
+- GitHub 副驾驶 copilot （人工智能代码提示）
+- fish + starship
 
-### Markdown
+## 使用
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 配置环境
 
-```markdown
-Syntax highlighted code block
+确保你电脑安有
+- `docker`，Windows 用户建议使用基于 WSL2 的 Docker Desktop，或者直接在 WSL2 中安装使用 Docker【更节省内存】
+- VScode
 
-# Header 1
-## Header 2
-### Header 3
+### 开始使用
 
-- Bulleted
-- List
+clone 此repo：
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```shell
+git clone git@github.com:Paxxs/devcontainer_cpp.git
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+使用 VScode 打开克隆的 devcontainer_cpp 文件夹，VScode 会自动弹出询问
 
-### Jekyll Themes
+![image](https://user-images.githubusercontent.com/10364775/162697698-2919051c-f4d0-418d-af36-1bb4563f2bc8.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Paxxs/devcontainer_cpp/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+点击在容器中打开，VScode 会自动配置好开发环境
 
-### Support or Contact
+🎉然后就直接可以使用了
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+> 目前没有设定默认shell 为 fish，可以输入 fish 进入 fish-shell
+
+### DIY
+
+配置 .devcontainer 文件夹内文件：
+- `devcontainer.json` 配置容器内 vscode 的插件、DevContainer 特性等
+- `Dockerfile` 容器环境配置
